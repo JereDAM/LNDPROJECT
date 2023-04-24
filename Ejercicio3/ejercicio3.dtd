@@ -1,0 +1,7 @@
+<!ELEMENT cadenaMontañosa (cordillera*)>
+<!ELEMENT cordillera (montaña+)>
+<!ELEMENT montaña (nombre, region?, altura?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT altura (#PCDATA)>
+<!ATTLIST altura unidadDeMedidad CDATA #REQUIRED>

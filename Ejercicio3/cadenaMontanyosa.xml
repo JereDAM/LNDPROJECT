@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cadenaMontañosa SYSTEM "ejercicio3.dtd">
+<cadenaMontañosa>
+    <cordillera>
+        <montaña>
+            <nombre>Teide</nombre>
+            <region>La Orotava</region>
+            <region>Granadilla</region>
+            <altura unidadDeMedida="m">3726</altura>
+        </montaña>
+        <montaña>
+            <nombre>Krakatoa</nombre>
+            <region>California</region>
+            <altura unidadDeMedida="m">4192</altura>
+        </montaña>
+    </cordillera>
+    <cordillera>
+        <montaña>
+            <nombre>Fuji</nombre>
+            <region>Yamanashi</region>
+            <region>Shizuoka</region>
+            <altura unidadDeMedida="m">3776</altura>
+        </montaña>
+    </cordillera>
+</cadenaMontañosa>
