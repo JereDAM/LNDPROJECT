@@ -1,0 +1,8 @@
+<!ELEMENT socios (persona)+>
+<!ATTLIST persona genero CDATA >
+<!ATTLIST persona id ID>
+<!ELEMENT persona (nombreYapellidos,telefono,email,socio)>
+<!ELEMENT nombreYapellidos (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT socio (#PCDATA)>
