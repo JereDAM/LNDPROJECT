@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE bebidas SYSTEM "ejercicio4.dtd">-->
+<!DOCTYPE bebidas [
+<!ELEMENT bebidas (bebida)*>
+<!ELEMENT bebida ((codigo | nombre), precio)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+]>
+
+<!--Aquí lo que hay que hacer es modificar el XML para que sea 
+correcto en relación al DTD, que en el enunciado diga que el XML sea válido
+no significa que sea correcto en relación al DTD-->
+
+
+<!-- Este sería el XML a arreglar esta comentado para que no salte errores
+<bebidas>
+    <bebida>
+        <codigo>L45</codigo>
+        <nombre>Leche</nombre>
+        <precio>8</precio>
+    </bebida>
+     <bebida>
+        <precio>6</precio>
+    </bebida>
+</bebidas>
+-->
+
+<!--Vale ahora una corrección hecha por mi -->
+
+<bebidas>
+    <bebida>
+        <nombre>Leche</nombre>
+        <precio>8</precio>
+    </bebida>
+    <bebida>
+        <codigo>L23</codigo>
+        <precio>5</precio>
+    </bebida>
+</bebidas>
+
+<!--La corrección que he hecho es que cuando defines el elemento bebida
+al poner la | indicas que pones codigo o nombre, no ambos 
+y pero uno debes ponerlo si o si, el precio también hay que ponerlo si o si 
+-->
