@@ -1,0 +1,13 @@
+<!ELEMENT factura (emision,vendedor,cliente,articulo+,desscuento?)>
+<!ATTLIST factura id ID #REQUIRED>
+<!ELEMENT emision (#PCDATA)>
+<!ELEMENT vendedor (nombre)>
+<!ATTLIST vendedor id ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT cliente (nombre, direccion, telefono*)>
+<!ATTLIST cliente id ID #REQUIRED>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT articulo (denominacion, precio, cantidad)>
+<!ATTLIST articulo id ID #REQUIRED>
+<!ATTLIST articulo iva CDATA #REQUIRED>
+<!ELEMENT descuento (#PCDATA)>
