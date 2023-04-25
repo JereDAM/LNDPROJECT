@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE shiporder [
+    <!ELEMENT shiporder (orderperson, shipto, item+)>
+    <!ATTLIST shiporder orderid ID NCName #REQUIRED>
+    <!ELEMENT orderperson (#PCDATA)>
+    <!ELEMENT shipto (name, address, city, country)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT address (#PCDATA)>
+    <!ELEMENT city (#PCDATA)>
+    <!ELEMENT country (#PCDATA)>
+    <!ELEMENT item (title, note?, quantity, price)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT note (#PCDATA)>
+    <!ELEMENT quantity (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+]>
 
-<shiporder orderid="889923">
+<shiporder orderid= "889923">
     <orderperson>Jhon Smith</orderperson>
     <shipto>
         <name>Ola Nordman</name>
