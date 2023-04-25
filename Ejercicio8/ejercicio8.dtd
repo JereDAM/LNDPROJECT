@@ -1,0 +1,12 @@
+<!ELEMENT vivero (especie)+>
+<!ELEMENT especie (nombre,precio,variedad,origen,color_fruto+,otros_datos)>
+<!ATTLIST especie siembra CDATA >
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio moneda (#PCDATA)>
+<!ELEMENT variedad (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT color_fruto (#PCDATA)>
+<!ELEMENT otros_datos (#PCDATA)>
+<!ATTLIST otros_datos maduracion (#PCDATA)>
+<!ATTLIST otros_datos riesgo (#PCDATA)>
