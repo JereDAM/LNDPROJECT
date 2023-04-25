@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="producto">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="cantidad" type="xs:positiveInteger" use="required"/>
+                    <xs:attribute name="unidad" type="opciones"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="opciones">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value = "cajas"></xs:enumeration>
+            <xs:enumeration value="pales"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
