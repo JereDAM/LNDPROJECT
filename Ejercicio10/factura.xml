@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<factura id="876">
+<factura id="876" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="ejercicio10.xsd"
+>
     <emision>2012-02-28T08:25:02</emision>
     <vendedor id="12">
         <nombre>Felipe Cuesta Pérez</nombre>
