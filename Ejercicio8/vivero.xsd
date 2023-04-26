@@ -3,25 +3,35 @@
     <xs:element name="vivero">
         <xs:complexType>
             <xs:sequence>
-               <xs:element name="nombre" type="xs:string"></xs:element>
-                    <xs:element name="precio">
-                       <xs:complexType>
-                            <xs:attribute name="moneda" type="xs:integer"></xs:attribute>
-                       </xs:complexType>
-                    </xs:element>
-                <xs:element name="variedad" type="xs:string"></xs:element>
-               <xs:element name="origen" type="xs:string"></xs:element>
-               <xs:element name="color_fruto" type="xs:string"></xs:element>
-               <xs:element name="otros_datos">
-                     <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="maduracion" type="xs:string"></xs:element>
-                            <xs:element name="riesgo" type="xs:string"></xs:element>
-                        </xs:sequence>
-                     </xs:complexType>
-               </xs:element>
+                <xs:element name="especie" maxOccurs="unbounded">
+                    <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="xs:string"></xs:element>
+                        <xs:element name="precio">
+                            <xs:complexType>
+                            <xs:simpleContent>
+                            <xs:extension base="xs:int">
+                                   <xs:attribute name="moneda" type="xs:string"></xs:attribute>
+                            </xs:extension>
+                            </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="variedad" type="xs:string"></xs:element>
+                        <xs:element name="origen" type="xs:string"></xs:element>
+                        <xs:element name="color_fruto" type="xs:string" minOccurs="1" maxOccurs="2"></xs:element>
+                        <xs:element name="otros_datos">
+                            <xs:complexType>
+                                <xs:sequence>
+                                <xs:element name="maduracion" type="xs:string"></xs:element>
+                                <xs:element name="riesgo" type="xs:string"></xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="siembra" type="xs:gYear" use="required"/>
+                </xs:complexType>
+                </xs:element>     
             </xs:sequence>
-            <xs:attribute name="cantidad" type="xs:positiveInteger" use="required"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
