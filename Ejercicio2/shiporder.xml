@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE shiporder [
     <!ELEMENT shiporder (orderperson, shipto, item+)>
-    <!ATTLIST shiporder orderid ID NCName #REQUIRED>
+    <!ATTLIST shiporder orderid ID id #REQUIRED>
     <!ELEMENT orderperson (#PCDATA)>
     <!ELEMENT shipto (name, address, city, country)>
     <!ELEMENT name (#PCDATA)>
