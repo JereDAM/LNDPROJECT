@@ -1,4 +1,4 @@
-<!ELEMENT factura (emision,vendedor,cliente,articulo+,desscuento?)>
+<!ELEMENT factura (emision,vendedor,cliente,articulo+,descuento?)>
 <!ATTLIST factura id ID #REQUIRED>
 <!ELEMENT emision (#PCDATA)>
 <!ELEMENT vendedor (nombre)>
