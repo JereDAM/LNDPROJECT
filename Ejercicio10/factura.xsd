@@ -48,9 +48,17 @@
                         <xs:attribute name="iva" type="xs:integer"></xs:attribute>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="descuento" type="xs:integer" minOccurs="0" maxOccurs="1"></xs:element>
+                <xs:element name="descuento" type="restriccion" minOccurs="0" maxOccurs="1" ></xs:element>
             </xs:sequence>
             <xs:attribute name="id" type="xs:integer" use="required"></xs:attribute>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name = "restriccion">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="120"/>
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>
