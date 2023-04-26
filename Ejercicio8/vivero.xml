@@ -11,7 +11,7 @@ xsi:noNamespaceSchemaLocation="vivero.xsd"
         <color_fruto>rojo</color_fruto>
         <color_fruto>rosa</color_fruto>
         <otros_datos>
-            <maduración>agosto</maduración>
+            <maduracion>agosto</maduracion>
             <riesgo>diario</riesgo>
         </otros_datos>
     </especie>
@@ -22,7 +22,7 @@ xsi:noNamespaceSchemaLocation="vivero.xsd"
         <origen>China</origen>
         <color_fruto>marón</color_fruto>
         <otros_datos>
-            <maduración>octubre</maduración>
+            <maduracion>octubre</maduracion>
             <riesgo>diario</riesgo>
         </otros_datos>
     </especie>  
@@ -33,7 +33,7 @@ xsi:noNamespaceSchemaLocation="vivero.xsd"
         <origen>Florida</origen>
         <color_fruto>rojo</color_fruto>
         <otros_datos>
-            <maduración>agosto</maduración>
+            <maduracion>agosto</maduracion>
             <riesgo>diario</riesgo>
         </otros_datos>
     </especie>
