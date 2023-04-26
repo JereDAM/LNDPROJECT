@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<listaalumnos
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Ejercicio7.xsd"
+>
+    <alumno DNI="1234567B">
+        <nombre>Jeremy</nombre>
+        <ap1>Benítez</ap1>
+    </alumno>
+    <alumno DNI="66666666A">
+        <nombre>Alejandro</nombre>
+        <ap1>vallejo</ap1>
+        <ap2>García</ap2>
+        <edad>90</edad>
+    </alumno>
+</listaalumnos>
