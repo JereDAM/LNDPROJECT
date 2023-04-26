@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Tuve que poner el dtd aqui porque si no me daba un error xD-->
 
 <!DOCTYPE Socios [
 <!ELEMENT socios (persona)+>

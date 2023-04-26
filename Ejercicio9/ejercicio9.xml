@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE comunidad [
+    <!ELEMENT Codigovecino (#PCDATA)>
+    <!ELEMENT Nombre (#PCDATA)>
+    <!ELEMENT Apellidos (#PCDATA)>
+    <!ELEMENT Portal (#PCDATA)>
+    <!ELEMENT Pisoyletra (#PCDATA)>
+    <!ELEMENT CCC (#PCDATA)>
+    <!ELEMENT Cargo (#PCDATA)>
+]
