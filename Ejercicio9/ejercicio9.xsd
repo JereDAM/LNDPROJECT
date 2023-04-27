@@ -3,10 +3,10 @@
     <xs:element name="comunidad">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="vecino">
+                <xs:element name="vecino" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="Codigovecino" type="xs:positiveInteger"></xs:element>
+                            <xs:element name="codigovecino" type="xs:positiveInteger"></xs:element>
                             <xs:element name="nombre" type="xs:string"></xs:element>
                             <xs:element name="apellido1" type="xs:string"></xs:element>
                             <xs:element name="apellido2" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
@@ -18,7 +18,7 @@
                                </xs:sequence> 
                             </xs:complexType> 
                             </xs:element>
-                            <xs:element name="CCC" type="codigocuenta"></xs:element>
+                            <xs:element name="CCC" type="xs:string"></xs:element>
                             <xs:element name="Cargo" type="cargovecino"></xs:element>
                         </xs:sequence>    
                     </xs:complexType>
@@ -30,19 +30,17 @@
 
     <xs:simpleType name="cargovecino">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[Presidente][Vicepresidente][Secretario][Vocal][Ninguno]"></xs:pattern>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="codigocuenta">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[ES]{1}[0-9]{23}"></xs:pattern>
+            <xs:enumeration value="Presidente"></xs:enumeration>
+            <xs:enumeration value="Vicepresidente"></xs:enumeration>
+            <xs:enumeration value="Vocal"></xs:enumeration>
+            <xs:enumeration value="Secretario"></xs:enumeration>
+            <xs:enumeration value="Ninguno"></xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="numeropiso">
         <xs:restriction base="xs:positiveInteger">
-            <xs:pattern value="[1-50]{1}"></xs:pattern>
+            <xs:pattern value="[1-50]{1,2}"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
 
@@ -51,7 +49,5 @@
             <xs:pattern value="[A-Z]{1}"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
-
-
 
 </xs:schema>

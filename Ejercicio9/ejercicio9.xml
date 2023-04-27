@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE comunidad [
+<!--DOCTYPE comunidad [
     <!ELEMENT comunidad (vecino+)>
     <!ELEMENT vecino (codigovecino, nombre, apellido1, apellido2?, Portal+, CCC, Cargo)>
     <!ELEMENT codigovecino (#PCDATA)>
@@ -12,9 +12,12 @@
     <!ELEMENT numeropiso (#PCDATA)>
     <!ELEMENT CCC (#PCDATA)>
     <!ELEMENT Cargo (#PCDATA)>
-]>
+]-->
 
-<comunidad>
+<comunidad
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="ejercicio9.xsd"
+>
     <vecino>
         <codigovecino>1</codigovecino>
         <nombre>Alexis</nombre>
@@ -23,43 +26,34 @@
             <piso>2</piso>
             <letra>B</letra>
         </Portal>
-        <CCC>ES12345678912345678912345</CCC>
+        <CCC>ES1234567891234567891234</CCC>
         <Cargo>Presidente</Cargo>
     </vecino>
-    <vecino>
-        <codigovecino>2</codigovecino>
-        <nombre>Alejandro</nombre>
-        <apellido1>Vallejo</apellido1>
-        <apellido2>García</apellido2>
-        <Portal>
-            <piso>2</piso>
-            <letra>C</letra>
-        </Portal>
-        <CCC>ES12345678912345678912345</CCC>
-        <Cargo>Presidente</Cargo>
-    </vecino>
+
     <vecino>
         <codigovecino>3</codigovecino>
         <nombre>Jeremy</nombre>
         <apellido1>Benítez</apellido1>
         <Portal>
-            <piso>18</piso>
+            <piso>2</piso>
             <letra>A</letra>
         </Portal>
         <CCC>ES12345678912345678912345</CCC>
         <Cargo>Vicepresidente</Cargo>
     </vecino>
+
     <vecino>
         <codigovecino>4</codigovecino>
         <nombre>Ricardo</nombre>
         <apellido1>Guts</apellido1>
         <Portal>
-            <piso>49</piso>
+            <piso>45</piso>
             <letra>D</letra>
         </Portal>
         <CCC>ES12345678912345678912345</CCC>
         <Cargo>Vocal</Cargo>
     </vecino>
+
     <vecino>
         <codigovecino>5</codigovecino>
         <nombre>María</nombre>
@@ -71,6 +65,7 @@
         <CCC>ES12345678912345678912345</CCC>
         <Cargo>Secretario</Cargo>
     </vecino>
+
     <vecino>
         <codigovecino>6</codigovecino>
         <nombre>Alba</nombre>
@@ -82,6 +77,7 @@
         <CCC>ES12345678912345678912345</CCC>
         <Cargo>Ninguno</Cargo>
     </vecino>
+
     <vecino>
         <codigovecino>7</codigovecino>
         <nombre>Cristofer</nombre>
@@ -93,6 +89,7 @@
         <CCC>ES12345678912345678912345</CCC>
         <Cargo>Ninguno</Cargo>
     </vecino>
+
     <vecino>
         <codigovecino>8</codigovecino>
         <nombre>Gabriel</nombre>
@@ -104,6 +101,7 @@
         <CCC>ES12345678912345678912345</CCC>
         <Cargo>Ninguno</Cargo>
     </vecino>
+
     <vecino>
         <codigovecino>9</codigovecino>
         <nombre>Adán</nombre>
@@ -112,9 +110,10 @@
             <piso>50</piso>
             <letra>A</letra>
         </Portal>
-        <CCC>2345234523</CCC>
+        <CCC>ES12345678912345678912345</CCC>
         <Cargo>Ninguno</Cargo>
     </vecino>
+
     <vecino>
         <codigovecino>10</codigovecino>
         <nombre>Alby</nombre>
@@ -126,4 +125,5 @@
         <CCC>ES12345678912345678912345</CCC>
         <Cargo>Ninguno</Cargo>
     </vecino>
+    
 </comunidad>
