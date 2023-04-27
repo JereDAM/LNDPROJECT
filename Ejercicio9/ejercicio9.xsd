@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="comunidad">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vecino" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="codigovecino" type="xs:positiveInteger"></xs:element>
+                            <xs:element name="nombre" type="xs:string"></xs:element>
+                            <xs:element name="apellido1" type="xs:string"></xs:element>
+                            <xs:element name="apellido2" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="Portal">
+                            <xs:complexType>
+                               <xs:sequence>
+                                    <xs:element name="piso" type="numeropiso"></xs:element>
+                                    <xs:element name="letra" type="letrapiso"></xs:element>
+                               </xs:sequence> 
+                            </xs:complexType> 
+                            </xs:element>
+                            <xs:element name="CCC" type="xs:string"></xs:element>
+                            <xs:element name="Cargo" type="cargovecino"></xs:element>
+                        </xs:sequence>    
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:simpleType name="cargovecino">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Presidente"></xs:enumeration>
+            <xs:enumeration value="Vicepresidente"></xs:enumeration>
+            <xs:enumeration value="Vocal"></xs:enumeration>
+            <xs:enumeration value="Secretario"></xs:enumeration>
+            <xs:enumeration value="Ninguno"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="numeropiso">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:pattern value="[1-50]{1,2}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="letrapiso">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{1}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
