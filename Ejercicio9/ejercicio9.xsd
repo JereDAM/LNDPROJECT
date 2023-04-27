@@ -12,12 +12,10 @@
                             <xs:element name="apellido2" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
                             <xs:element name="Portal">
                             <xs:complexType>
-                                <xs:simpleContent>
-                                    <xs:extension base="xs:string">
-                                        <xs:attribute name="Piso" type="numeropiso"></xs:attribute>
-                                        <xs:attribute name="Letra" type="letrapiso"></xs:attribute>
-                                    </xs:extension>
-                                </xs:simpleContent>  
+                               <xs:sequence>
+                                    <xs:element name="piso" type="numeropiso"></xs:element>
+                                    <xs:element name="letra" type="letrapiso"></xs:element>
+                               </xs:sequence> 
                             </xs:complexType> 
                             </xs:element>
                             <xs:element name="CCC" type="codigocuenta"></xs:element>
@@ -32,13 +30,13 @@
 
     <xs:simpleType name="cargovecino">
         <xs:restriction base="xs:string">
-            <xs:pattern value="['Presidente']['Vicepresidente']['Secretario']['Vocal']['Ninguno']"></xs:pattern>
+            <xs:pattern value="[Presidente][Vicepresidente][Secretario][Vocal][Ninguno]"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="codigocuenta">
         <xs:restriction base="xs:string">
-            <xs:pattern value="['ES']{1}[0-9]{23}"></xs:pattern>
+            <xs:pattern value="[ES]{1}[0-9]{23}"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
 
